@@ -39,13 +39,13 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 
-// #### Images ##### //
+// #### Image ##### //
 
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent.nav["img-src"])
 
 
-// ######## UPDATE NAV LINK ########## //
+// ########  NAV LINK ########## //
 
 const navBar = document.querySelectorAll('nav a');
 navBar.forEach(( navValue, i) => {
@@ -105,6 +105,10 @@ contactContent[0].innerHTML = siteContent.contact["address"];
 contactContent[1].textContent = siteContent.contact["phone"];
 contactContent[2].textContent = siteContent.contact["email"];
 
+
+
 // ###### FOOTER ######### ///
+
+
 const footer = document.querySelector('footer');
 footer.textContent = siteContent.footer.copyright;
