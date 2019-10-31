@@ -99,7 +99,12 @@ sectionContent[4].textContent = siteContent["main-content"]["vision-content"];
 const contactHeader = document.querySelectorAll('.contact h4');
 contactHeader[0].innerText = siteContent.contact['contact-h4'];
 
-const contactContent = document.querySelectorAll('.contact p');
-contactContent[0].textContent = siteContent.contact.address
-contactContent[1].textContent = siteContent.contact.phone
-contactContent[2].textContent = siteContent.contact.email
+
+const contactContent = document.querySelectorAll(".contact p");
+contactContent[0].innerHTML = siteContent.contact["address"];
+contactContent[1].textContent = siteContent.contact["phone"];
+contactContent[2].textContent = siteContent.contact["email"];
+
+// ###### FOOTER ######### ///
+const footer = document.querySelector('footer');
+footer.textContent = siteContent.footer.copyright;
