@@ -38,5 +38,37 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+// #### Images ##### //
+
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent.nav["img-src"])
+
+
+let midPge = document.getElementById("middle-img");
+midPge.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+// ######## UPDATE NAV LINK ########## //
+
+const navBar = document.querySelectorAll('nav a');
+navBar.forEach(( navValue, i) => {
+navValue.textContent = siteContent.nav[`nav-item-${i + 1}`];
+});
+
+// ##### HEADER NAV ##### //
+
+let greenC = document.querySelectorAll("header nav a");
+greenC.forEach(eGreen => {
+  eGreen.style.color = "green";
+});
+
+// ####### CTA CTA CTA STYLING ##### //// 
+
+const topH1 = document.querySelector('h1');
+topH1.textContent = siteContent.cta.h1;
+
+
+
+let headImg = document.getElementById("cta-img");
+headImg.setAttribute('src', siteContent.cta["img-src"])
