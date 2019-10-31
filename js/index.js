@@ -68,7 +68,11 @@ greenC.forEach(eGreen => {
 const topH1 = document.querySelector('h1');
 topH1.textContent = siteContent.cta.h1;
 
-
+// ## CTA IMAGE ### //
 
 let headImg = document.getElementById("cta-img");
 headImg.setAttribute('src', siteContent.cta["img-src"])
+
+// ## CTA Img ## //
+const topBtn = document.querySelector('button');
+topBtn.textContent = siteContent.cta.button;
