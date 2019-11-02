@@ -62,6 +62,12 @@ navValue.textContent = siteContent.nav[`nav-item-${i + 1}`];
 
 });
 
+// let anchors = document.querySelectorAll("a");
+// for (let i = 0; i < anchors.length; i++) {
+//   anchors[i].textContent = siteContent ["nav"][`nav-item-${i+1}`];
+//   anchors[i].style.color = 'green';
+// }
+
 // ##### HEADER NAV ##### //
 
 let greenC = document.querySelectorAll("header nav a");
