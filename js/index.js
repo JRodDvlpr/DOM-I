@@ -15,15 +15,24 @@ const siteContent = {
   },
   "main-content": {
     "features-h4":"Features",
+
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "about-h4":"About",
+
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+
     "middle-img-src": "img/mid-page-accent.jpg",
+
     "services-h4":"Services",
+
     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+
     "product-h4":"Product",
+
     "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+
     "vision-h4":"Vision",
+
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
   "contact": {
@@ -50,19 +59,40 @@ logo.setAttribute('src', siteContent.nav["img-src"])
 const navBar = document.querySelectorAll('nav a');
 navBar.forEach(( navValue, i) => {
 navValue.textContent = siteContent.nav[`nav-item-${i + 1}`];
+
 });
 
 // ##### HEADER NAV ##### //
 
 let greenC = document.querySelectorAll("header nav a");
-greenC.forEach(eGreen => {
-  eGreen.style.color = "green";
+greenC.forEach(Green => {
+  Green.style.color = "green";
+  
 });
+
+// ###### New Contact Added ###### ////
+
+const headerNavBar = document.querySelector('nav');
+
+const newA1 = document.createElement('a')
+newA1.textContent = 'FAQ';
+newA1.style.color = 'green';
+
+const newA2 = document.createElement('a')
+newA2.textContent = 'Profile';
+newA2.style.color = 'green';
+
+headerNavBar.appendChild(newA1);
+headerNavBar.prepend(newA2);
+
 
 // ####### CALL TO ACTION STYLING ##### //// 
 
 const topH1 = document.querySelector('h1');
-topH1.textContent = siteContent.cta.h1;
+topH1.innerHTML = siteContent.cta.h1;
+
+// const ctaText = document.querySelector(".cta-text h1");
+// ctaText.innerHTML = siteContent['cta']['h1'].replace(/\s/g, "</br>");
 
 
 
@@ -100,8 +130,11 @@ const contactHeader = document.querySelectorAll('.contact h4');
 contactHeader[0].innerText = siteContent.contact['contact-h4'];
 
 
+
+
 const contactContent = document.querySelectorAll(".contact p");
-contactContent[0].innerHTML = siteContent.contact["address"];
+// siteContent.contact["address"] = "123 Way 456 Street <br> Somewhere, USA";
+contactContent[0].textContent = siteContent.contact["address"];
 contactContent[1].textContent = siteContent.contact["phone"];
 contactContent[2].textContent = siteContent.contact["email"];
 
